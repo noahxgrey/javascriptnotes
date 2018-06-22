@@ -130,4 +130,41 @@ alert(2 ** 4); // 16 (2 * 2 * 2 * 2)
 let a = (1 + 2, 3 + 4);
 alert(a); // 7
 ```
+## Variables
+#### Most of the time, a JavaScript application needs to work with information. 2 examples:
+1. An online shop -- the info might include goods being sold and a shopping cart
+2. A chat application -- the info might include users, messages, and much more.
+#### Variables are used to store this info
+#### A variable is a "named storage" for data. Can use variables to store goodies, visitors and other data. To create a variable in JavaScript, we need to use the `let` variable. ex:
+```javascript
+let message;
+```
+#### Creates a variable with the name "message". Now we can put some data into it by using the assignment (`=`) operator.
+```javascript
+message = "Hello"; // stores the string
+```
+#### The string is now save into the mrmory area associated with the variable. We can access it using the variable name.
+```javascript
+alert(message); // "Hello" is returned
+```
+#### To be concise we can merge variable declaration and assignments to one line
+```javascript
+let message = "Hello";
+```
+#### You can declare multiple declarations in one line
+```javascript
+let user = "John", age = 25, message = "Hello"; // or
+let user = "John";
+let age = 25;
+let message = "Hello"; // or
+let user = "John";
+, age = 25;
+, message = "Hello"; // matter of preference
+```
+### Analogy: Imagine variable as a box for data, message as the label on the box, with the value "Hello" inside.
+#### Variable Naming - 2 limitations for a varaiable name:
+1. The name must contain only letters, digital symbols (`$`) and underscores (`_`)
+2. The first character must not be a digit.
+#### Case matters. when multiple words -- `m`y`V`ery`L`ong`N`ame.
 
+#### To declare a constant unchanging variable, use `const` instead of `let`. `Const` cannot be changed.
