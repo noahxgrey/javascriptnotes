@@ -157,9 +157,9 @@ let user = "John", age = 25, message = "Hello"; // or
 let user = "John";
 let age = 25;
 let message = "Hello"; // or
-let user = "John";
-, age = 25;
-, message = "Hello"; // matter of preference
+let user = "John",
+    age = 25,
+    message = "Hello"; // matter of preference
 ```
 ### Analogy: Imagine variable as a box for data, message as the label on the box, with the value "Hello" inside.
 #### Variable Naming - 2 limitations for a varaiable name:
