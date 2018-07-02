@@ -61,5 +61,45 @@ let user = {
     name: "John",
     age: 30, // That is called a "trailing" or "hanging" comma. Makes it easier to add/remove/move around properties, because all lines become alike.
 }
+```
 
 ### Square Brackets
+#### For multiword properties, the dot access doesn't work:
+```javascript
+// this would give a syntax error
+user.likes birds = true
+```
+#### That's because the dot requires the key to be a valid variable identifier. That is: no spaces and other limitations. There's an alternative "square bracket notation" that works with any string:
+```javascript
+let user = {};
+
+// set
+user["likes birds"] = true;
+
+// get
+alert(user["likes birds"]); // true
+
+//delete
+delete user["likes birds"];
+```
+
+#### Now everything is fine. Please note that the string inside the brackets is properly quoted (any type of quotes will do). Square brackets also provide a way to obtain the property name as the result of any expression -- as opposed to a literal string -- like from a variable as follows:
+```javascript
+let key = "likes birds";
+
+// same as user["likes birds"] = true;
+user[key] = true;
+```
+
+#### Here, the variable `key` may be calculated at run-time or depend on the user input. And then we use it to access the property. That gives us a great deal of dlexibility. The dot notation cannot be used in a similar way. For instance:
+```javascript
+let user = {
+    name: "John", 
+    age: 30
+};
+
+let key = prompt("What do you want to know about the user?", "name");
+
+// access by variable 
+alert( user[key] ); // John (if enter "name")
+```
